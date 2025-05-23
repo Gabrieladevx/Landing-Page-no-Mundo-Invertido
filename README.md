@@ -12,7 +12,8 @@ Este projeto é uma landing page inspirada no universo de Stranger Things, com v
 - Música ambiente que muda conforme o tema
 
 ## Como usar
-Acesse a landing page online pelo link fornecido
+Acesse a landing page online pelo link abaixo:
+- [https://gabrieladevx.github.io/Landing-Page-no-Mundo-Invertido/]
 
 ## Estrutura
 - `index.html`: página principal
