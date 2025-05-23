@@ -20,10 +20,6 @@ Acesse a landing page online pelo link fornecido
 - `assets/images/`: imagens e ilustrações
 - `assets/musics/`: trilhas sonoras
 
-## Observações
-- As imagens e trilhas são para fins didáticos.
-- Última atualização: maio/2025
-
 ## 💻 Tecnologias
 - HTML
 - CSS
