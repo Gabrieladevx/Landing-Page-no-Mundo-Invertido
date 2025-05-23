@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo Invertido</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="light-theme">
+    <header>
+      <div class="header-content">
+        <img class="invert-element" src="assets/images/banner/logo.svg" alt="" />
+        <p class="invert-element">
+          Prepare-se para a temporada final! Stranger Things retorna em 2025 para o Volume 5, prometendo o confronto definitivo entre Eleven, Vecna e o destino de Hawkins. Novos mistérios, perigos e reviravoltas aguardam os fãs na última aventura da série que conquistou o mundo.
+        </p>
+        <button id="switch-theme-button" onclick="switchTheme()">Inverter Mundos</button>
+      </div>
+
+      <div id="top-characters" class="world-characters"></div>
+    </header>
+
+    <main>
+      <div id="bottom-characters" class="world-characters"></div>
+
+      <section id="section-inverted-world" class="container">
+        <div class="section-texts">
+          <h2>O Mundo Invertido</h2>
+          <p>
+            O Mundo Invertido está mais ameaçador do que nunca! Após os eventos da quarta temporada, Vecna segue com seu plano de invadir Hawkins, enquanto portais continuam abertos e criaturas ainda mais perigosas surgem. A batalha final se aproxima e o destino da cidade está nas mãos dos heróis.
+          </p>
+        </div>
+
+        <img
+          class="invert-element"
+          src="assets/images/content/inverted-world.png"
+          alt="Mundo Invertido"
+        />
+      </section>
+
+      <section id="section-stranger-things-trailer" class="container">
+        <div class="video-frame">
+          <!-- Trailer removido a pedido do usuário -->
+        </div>
+        <div class="section-texts">
+          <h2>Stranger Things Vol. 5</h2>
+          <p>
+            A quinta e última temporada de Stranger Things estreia em 2025! Os personagens enfrentam seus maiores desafios, com novas alianças, perdas e revelações. O futuro de Eleven, Will, Max e toda Hawkins será decidido em uma batalha épica contra Vecna e as forças do Mundo Invertido.
+          </p>
+        </div>
+      </section>
+
+      <section id="section-stranger-things-gallery">
+        <div class="container section-text">
+          <h2 style="color:#ff3b3b; text-shadow:0 2px 16px #000,0 0 8px #cf0f0f; font-size:2rem; letter-spacing:2px;">O fenômeno global da Netflix</h2>
+          <div class="gallery-container">
+            <div class="gallery-image invert-element" style="box-shadow:0 0 24px 4px #cf0f0f,0 0 0 4px #000 inset; outline:3px solid #cf0f0f; border:2px solid #fff;">
+              <img src="assets/images/content/serie-image-01.png" alt="" style="filter:contrast(1.2) brightness(1.2) drop-shadow(0 0 12px #cf0f0f); border-radius:16px;" />
+            </div>
+            <div class="gallery-image invert-element" style="box-shadow:0 0 24px 4px #cf0f0f,0 0 0 4px #000 inset; outline:3px solid #cf0f0f; border:2px solid #fff;">
+              <img src="assets/images/content/serie-image-02.png" alt="" style="filter:contrast(1.2) brightness(1.2) drop-shadow(0 0 12px #cf0f0f); border-radius:16px;" />
+            </div>
+            <div class="gallery-image invert-element" style="box-shadow:0 0 24px 4px #cf0f0f,0 0 0 4px #000 inset; outline:3px solid #cf0f0f; border:2px solid #fff;">
+              <img src="assets/images/content/serie-image-03.png" alt="" style="filter:contrast(1.2) brightness(1.2) drop-shadow(0 0 12px #cf0f0f); border-radius:16px;" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-form" class="container">
+        <h2>O Clube Dungeons & Dragons</h2>
+        <p>
+          O Hellfire Club está recrutando! Junte-se ao clube de D&D de Hawkins e viva aventuras inspiradas nos acontecimentos mais recentes da série. Mostre sua coragem, desafie o desconhecido e ajude a proteger Hawkins do Mundo Invertido.
+        </p>
+
+        <div class="form-content">
+          <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo<span></h3>
+
+          <div class="form-container">
+            <form action="">
+              <label for="name">Nome Completo</label>
+              <input type="text" name="name">
+
+              <label for="email">E-mail</label>
+              <input type="email" name="email">
+
+              <label for="level">Level</label>
+              <input type="text" name="level">
+
+              <label for="character">Personagem</label>
+              <textarea name="character" cols="30" rows="10"></textarea>
+            
+              <button>Me inscrever</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Site desenvolvido por Gabriela Alves | Inspirado em Stranger Things, Volume 5 estreia em 2025!
+      </p>
+    </footer>
+
+    <audio id="music" src="assets/musics/normal-world.mpeg" autoplay></audio>
+
+    <script>
+      window.addEventListener('click', function() {
+        const audio = document.getElementById('music');
+        audio.play();
+        audio.volume = 0.2;
+      })
+
+      function switchTheme() {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+
+        const theme = document.body.classList[0];
+        const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
+
+        const audio = document.getElementById('music');
+        audio.src = `assets/musics/${music}`;
+        audio.play();
+        audio.volume = 0.2;
+      }
+    </script>
+  </body>
+</html>
